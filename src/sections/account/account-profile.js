@@ -10,11 +10,11 @@ import {
 } from '@mui/material';
 
 const user = {
-  avatar: '/assets/avatars/avatar-anika-visser.png',
-  city: 'Los Angeles',
-  country: 'USA',
+  avatar: '/assets/avatars/raj.jpg',
+  city: 'virar',
+  country: 'INDIA',
   jobTitle: 'Senior Developer',
-  name: 'Anika Visser',
+  name: 'raj nishad',
   timezone: 'GTM-7'
 };
 

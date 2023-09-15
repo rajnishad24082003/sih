@@ -33,7 +33,7 @@ const Page = () => (
         maxWidth: '100%',
       }}
     >
-      <TextField fullWidth label="URL/IP Address" id="fullWidth" /><Button variant="contained" style={{margin:"20px",display:"flex",justifyContent:"center"}}>scan</Button>
+      <TextField fullWidth label="URL/IP Address" id="fullWidth" /><Button variant="contained" style={{margin:"20px",display:"flex",justifyContent:"center"}}>Scan</Button>
     </Box>
         <Grid container spacing={3}>
           <Grid xs={12} sm={6} lg={3}>
