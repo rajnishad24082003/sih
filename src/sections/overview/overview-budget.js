@@ -26,7 +26,7 @@ export const OverviewBudget = (props) => {
         >
           <Stack spacing={1}>
             <Typography color="text.secondary" variant="overline">
-              Issues
+            Critical vulnerability
             </Typography>
             <Typography variant="h4">{value}</Typography>
           </Stack>

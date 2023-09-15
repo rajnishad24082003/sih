@@ -10,6 +10,7 @@ import { OverviewTasksProgress } from "src/sections/overview/overview-tasks-prog
 import { OverviewTotalCustomers } from "src/sections/overview/overview-total-customers";
 import { OverviewTotalProfit } from "src/sections/overview/overview-total-profit";
 import { OverviewTraffic } from "src/sections/overview/overview-traffic";
+import {TextField,Button} from "@mui/material";
 
 const now = new Date();
 
@@ -26,13 +27,21 @@ const Page = () => (
       }}
     >
       <Container maxWidth="xl">
+      <Box
+      sx={{
+        width: "100%",
+        maxWidth: '100%',
+      }}
+    >
+      <TextField fullWidth label="URL/IP Address" id="fullWidth" /><Button variant="contained" style={{margin:"20px",display:"flex",justifyContent:"center"}}>scan</Button>
+    </Box>
         <Grid container spacing={3}>
           <Grid xs={12} sm={6} lg={3}>
             <OverviewBudget
               difference={12}
               positive
               sx={{ height: "100%" }}
-              value="Critical vulnerability"
+              value="15+"
             />
           </Grid>
           <Grid xs={12} sm={6} lg={3}>
@@ -77,63 +86,53 @@ const Page = () => (
               orders={[
                 {
                   id: "f69f88012978187a6c12897f",
-                  ref: "DEV1049",
+                  ref: "com.simpl.android-Android",
                   amount: 30.5,
                   customer: {
-                    name: "Ekaterina Tankova",
+                    name: "Android Vulnerability",
                   },
                   createdAt: 1555016400000,
-                  status: "pending",
+                  status: "critical",
                 },
                 {
                   id: "9eaa1c7dd4433f413c308ce2",
-                  ref: "DEV1048",
+                  ref: "com.zomata.zomato-IOS",
                   amount: 25.1,
                   customer: {
-                    name: "Cao Yu",
+                    name: "IOS Vulnerability",
                   },
                   createdAt: 1555016400000,
-                  status: "delivered",
+                  status: "critical",
                 },
                 {
                   id: "01a5230c811bd04996ce7c13",
-                  ref: "DEV1047",
+                  ref: "com.ubercab.UberClient-IOS",
                   amount: 10.99,
                   customer: {
-                    name: "Alexa Richardson",
+                    name: "IOS Vulnerability",
                   },
                   createdAt: 1554930000000,
-                  status: "refunded",
+                  status: "medium",
                 },
                 {
                   id: "1f4e1bd0a87cea23cdb83d18",
-                  ref: "DEV1046",
+                  ref: "com.facebook.lite-IOS",
                   amount: 96.43,
                   customer: {
-                    name: "Anje Keizer",
+                    name: "IOS Vulnerability",
                   },
                   createdAt: 1554757200000,
-                  status: "pending",
+                  status: "low",
                 },
                 {
-                  id: "9f974f239d29ede969367103",
-                  ref: "DEV1045",
-                  amount: 32.54,
+                  id: "1f4e1bd0a87cea23cdb83d18",
+                  ref: "com.insta.lite-IOS",
+                  amount: 96.43,
                   customer: {
-                    name: "Clarke Gillebert",
+                    name: "IOS Vulnerability",
                   },
-                  createdAt: 1554670800000,
-                  status: "delivered",
-                },
-                {
-                  id: "ffc83c1560ec2f66a1c05596",
-                  ref: "DEV1044",
-                  amount: 16.76,
-                  customer: {
-                    name: "Adam Denisov",
-                  },
-                  createdAt: 1554670800000,
-                  status: "delivered",
+                  createdAt: 1554757200000,
+                  status: "low",
                 },
               ]}
               sx={{ height: "100%" }}

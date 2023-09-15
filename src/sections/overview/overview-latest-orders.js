@@ -1,5 +1,6 @@
 import { format } from 'date-fns';
 import PropTypes from 'prop-types';
+import ArrowDownLeftIcon from "@heroicons/react/24/solid/ArrowDownLeftIcon";
 import ArrowRightIcon from '@heroicons/react/24/solid/ArrowRightIcon';
 import {
   Box,
@@ -19,9 +20,10 @@ import { Scrollbar } from 'src/components/scrollbar';
 import { SeverityPill } from 'src/components/severity-pill';
 
 const statusMap = {
-  pending: 'warning',
-  delivered: 'success',
-  refunded: 'error'
+  low:'success',
+  medium: 'info',
+  high: 'warning',
+  critical: 'error'
 };
 
 export const OverviewLatestOrders = (props) => {
@@ -29,30 +31,28 @@ export const OverviewLatestOrders = (props) => {
 
   return (
     <Card sx={sx}>
-      <CardHeader title="Latest Orders" />
+      <CardHeader title="Report" />
       <Scrollbar sx={{ flexGrow: 1 }}>
         <Box sx={{ minWidth: 800 }}>
           <Table>
             <TableHead>
               <TableRow>
                 <TableCell>
-                  Order
+                  Vulnerability Name
                 </TableCell>
                 <TableCell>
-                  Customer
+                  Solutions
                 </TableCell>
                 <TableCell sortDirection="desc">
-                  Date
+                  Report
                 </TableCell>
                 <TableCell>
-                  Status
+                  Level
                 </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {orders.map((order) => {
-                const createdAt = format(order.createdAt, 'dd/MM/yyyy');
-
                 return (
                   <TableRow
                     hover
@@ -65,7 +65,10 @@ export const OverviewLatestOrders = (props) => {
                       {order.customer.name}
                     </TableCell>
                     <TableCell>
-                      {createdAt}
+                    <SvgIcon fontSize="small" sx={{ color: "neutral.500" }}>
+                    <ArrowDownLeftIcon/>
+            </SvgIcon>
+                    
                     </TableCell>
                     <TableCell>
                       <SeverityPill color={statusMap[order.status]}>
